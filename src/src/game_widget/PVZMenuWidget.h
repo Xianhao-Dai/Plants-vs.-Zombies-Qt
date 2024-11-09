@@ -6,6 +6,7 @@
 #define PVZMENUWIDGET_H
 
 #include <QWidget>
+#include <QtWidgets/QLabel>
 
 
 class QLineEdit;
@@ -22,6 +23,7 @@ private:
     PVZPushButton *puzzleButton;
     PVZPushButton *miniGamesButton;
     PVZPushButton *changeNameButton;
+    QLabel *nameLabel;
     PVZDialog *changeNameDialog;
     QLineEdit* nameLineEdit;
 

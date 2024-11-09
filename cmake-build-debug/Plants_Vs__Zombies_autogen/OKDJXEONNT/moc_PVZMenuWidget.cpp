@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../../../src/src/game_widget/PVZMenuWidget.h"
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>

@@ -40,6 +40,9 @@ void PVZMenuWidget::setUpUI() {
     changeNameDialog->setWindowFlag(Qt::FramelessWindowHint);
     changeNameDialog->addButton("Confirm", [=]() {
         changeNameDialog->hide();
+        if (!nameLineEdit->text().isEmpty()) {
+            nameLabel->setText(nameLineEdit->text());
+        }
         nameLineEdit->setText("");
         nameLineEdit->clearFocus();
     });
@@ -60,6 +63,12 @@ void PVZMenuWidget::setUpUI() {
     connect(changeNameButton, &PVZPushButton::clicked, this, [=]() {
         changeNameDialog->show();
     });
+    nameLabel = new QLabel(this);
+    nameLabel->setAlignment(Qt::AlignCenter);
+    nameLabel->setFixedSize(225, 20);
+    nameLabel->move(85, 95);
+    nameLabel->setFont(QFont("Chalkduster", 15, QFont::Light));
+    nameLabel->setStyleSheet("color: rgb(255, 255, 255); background-color: transparent;");
 }
 
 void PVZMenuWidget::paintEvent(QPaintEvent *event) {
