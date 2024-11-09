@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_Plants_Vs__Zombies_FILE /Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies)
+set(__QT_DEPLOY_TARGET_Plants_Vs__Zombies_TYPE EXECUTABLE)

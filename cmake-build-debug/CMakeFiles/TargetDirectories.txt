@@ -1,0 +1,5 @@
+/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/CMakeFiles/Plants_Vs__Zombies.dir
+/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/CMakeFiles/Plants_Vs__Zombies_autogen_timestamp_deps.dir
+/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/CMakeFiles/Plants_Vs__Zombies_autogen.dir

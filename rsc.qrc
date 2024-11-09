@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/default">
+        <file>src/assets/bg/loading_game_start.jpg</file>
+        <file>src/assets/bg/loading_dirt.png</file>
+        <file>src/assets/bg/loading_grass.png</file>
+        <file>src/assets/bg/loading_grass_roll.png</file>
+        <file>src/assets/bg/menu_sky.jpg</file>
+        <file>src/assets/bg/menu_tree.png</file>
+        <file>src/assets/bg/menu_ground.png</file>
+        <file>src/assets/bg/menu_tomb.png</file>
+        <file>src/assets/bg/menu_shadow_start_adventure.png</file>
+        <file>src/assets/bg/menu_shadow_puzzle.png</file>
+        <file>src/assets/bg/menu_shadow_survival.png</file>
+        <file>src/assets/bg/menu_shadow_mini_games.png</file>
+        <file>src/assets/bg/menu_cloud_1.png</file>
+        <file>src/assets/bg/menu_cloud_2.png</file>
+        <file>src/assets/bg/menu_cloud_3.png</file>
+        <file>src/assets/bg/menu_cloud_4.png</file>
+        <file>src/assets/bg/menu_cloud_5.png</file>
+        <file>src/assets/bg/menu_cloud_6.png</file>
+        <file>src/assets/bg/menu_welcome_back.png</file>
+        <file>src/assets/bg/menu_change_name.png</file>
+        <file>src/assets/bg/menu_start_adventure.png</file>
+        <file>src/assets/bg/menu_puzzle.png</file>
+        <file>src/assets/bg/menu_survival.png</file>
+        <file>src/assets/bg/menu_mini_games.png</file>
+        <file>src/assets/bg/dialog_bottom_left.png</file>
+        <file>src/assets/bg/dialog_bottom_right.png</file>
+        <file>src/assets/bg/dialog_bottom_middle.png</file>
+        <file>src/assets/bg/dialog_top_left.png</file>
+        <file>src/assets/bg/dialog_top_right.png</file>
+        <file>src/assets/bg/dialog_top_middle.png</file>
+        <file>src/assets/bg/dialog_left_middle.png</file>
+        <file>src/assets/bg/dialog_right_middle.png</file>
+        <file>src/assets/bg/dialog_center.png</file>
+        <file>src/assets/bg/dialog_header.png</file>
+        <file>src/assets/bg/dialog_button_left.png</file>
+        <file>src/assets/bg/dialog_button_middle.png</file>
+        <file>src/assets/bg/dialog_button_right.png</file>
+    </qresource>
+</RCC>
