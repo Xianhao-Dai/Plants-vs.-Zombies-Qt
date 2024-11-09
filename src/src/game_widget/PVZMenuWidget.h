@@ -8,6 +8,7 @@
 #include <QWidget>
 
 
+class QLineEdit;
 class PVZDialog;
 class PVZPushButton;
 
@@ -22,6 +23,7 @@ private:
     PVZPushButton *miniGamesButton;
     PVZPushButton *changeNameButton;
     PVZDialog *changeNameDialog;
+    QLineEdit* nameLineEdit;
 
     const int mainWindowWidth;
     const int mainWindowHeight;

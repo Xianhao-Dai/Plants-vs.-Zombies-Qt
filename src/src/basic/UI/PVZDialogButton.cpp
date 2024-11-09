@@ -35,5 +35,6 @@ PVZDialogButton::PVZDialogButton(QWidget *parent, QString text) : QPushButton(pa
     textLabel->setFixedSize(this->size());
     textLabel->move(0, 0);
     textLabel->setFont(font);
+    textLabel->setStyleSheet("color: rgb(255, 255, 255);");
     textLabel->setText(text);
 }

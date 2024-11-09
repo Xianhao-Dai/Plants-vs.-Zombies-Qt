@@ -4,12 +4,15 @@
 
 #include "PVZMenuWidget.h"
 
+#include <QApplication>
+
 #include "src/src/basic/util/PVZResourceLoaderUtil.h"
 #include "src/src/basic/util/PVZWidgetUtil.h"
 #include "src/src/basic/UI/PVZPushButton.h"
 #include "src/src/basic/UI/PVZDialog.h"
 
 #include <QPainter>
+#include <QLineEdit>
 
 PVZMenuWidget::PVZMenuWidget(QWidget *parent) :
 QWidget(parent),
@@ -32,15 +35,28 @@ void PVZMenuWidget::setUpUI() {
     survivalButton->move(600, 300);
     changeNameButton = new PVZPushButton(this, "/bg/menu_change_name");
     changeNameButton->move(50, 135);
-    changeNameDialog = new PVZDialog("", "");
+    changeNameDialog = new PVZDialog("Change Your Name", "You may change your name if it's not your account!");
     changeNameDialog->setModal(true);
     changeNameDialog->setWindowFlag(Qt::FramelessWindowHint);
     changeNameDialog->addButton("Confirm", [=]() {
         changeNameDialog->hide();
+        nameLineEdit->setText("");
+        nameLineEdit->clearFocus();
     });
     changeNameDialog->addButton("Cancel", [=]() {
         changeNameDialog->hide();
+        nameLineEdit->setText("");
+        nameLineEdit->clearFocus();
     });
+    nameLineEdit = new QLineEdit(this);
+    nameLineEdit->setPlaceholderText("Enter your name");
+    nameLineEdit->setAlignment(Qt::AlignCenter);
+    nameLineEdit->setFocusPolicy(Qt::ClickFocus);
+    nameLineEdit->setFont(QFont("Chalkduster", 20, QFont::Bold));
+    nameLineEdit->setMaxLength(20);
+    nameLineEdit->setFixedWidth(300);
+    nameLineEdit->setStyleSheet("color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);");
+    changeNameDialog->addAdditionalWidget(nameLineEdit);
     connect(changeNameButton, &PVZPushButton::clicked, this, [=]() {
         changeNameDialog->show();
     });

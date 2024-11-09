@@ -12,27 +12,64 @@
 #include "PVZDialogButton.h"
 #include "PVZPushButton.h"
 
-PVZDialog::PVZDialog(QString title, QString message) : QDialog() {
-    dialogWidth = 600;
-    dialogHeight = 500;
-    this->setFixedSize(dialogWidth, dialogHeight);
-    buttonsWidget = new QWidget(this);
-    QVBoxLayout *dialogLayout = new QVBoxLayout(this);
-    QHBoxLayout *buttonLayout = new QHBoxLayout(buttonsWidget);
-    buttonLayout->setAlignment(Qt::AlignCenter);
-    buttonLayout->setSpacing(30);
-    QSpacerItem *spacer = new QSpacerItem(0, dialogHeight - 112, QSizePolicy::Expanding, QSizePolicy::Fixed);
-    dialogLayout->addSpacerItem(spacer);
-    dialogLayout->addWidget(buttonsWidget);
-    buttonsWidget->setLayout(buttonLayout);
-    this->setLayout(dialogLayout);
-    this->setStyleSheet("background-color:transparent");
+PVZDialog::PVZDialog(QString title, QString message) : QDialog(), buttons(), title(title), message(message) {
+    setUpUI();
 }
 
 void PVZDialog::addButton(QString text, std::function<void()>clicked) {
     PVZDialogButton *btn = new PVZDialogButton(this , text);
-    buttonsWidget->layout()->addWidget(btn);
+    buttons.push_back(btn);
+    buttonsLayout->addWidget(btn);
     connect(btn, &PVZPushButton::clicked, clicked);
+}
+
+void PVZDialog::addAdditionalWidget(QWidget *widget) {
+    widget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    verticalLayout->insertWidget(3, widget);
+    verticalLayout->setAlignment(widget, Qt::AlignCenter);
+}
+
+void PVZDialog::setUpUI() {
+    dialogWidth = 600;
+    dialogHeight = 500;
+
+    titleLabel = new QLabel(title, this);
+    titleLabel->setFont(QFont("Chalkduster", 40, QFont::Bold));
+    titleLabel->setAlignment(Qt::AlignCenter);
+    titleLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    titleLabel->setStyleSheet("color: rgb(0, 255, 0);");
+    messageLabel = new QLabel(message, this);
+    messageLabel->setFont(QFont("Chalkduster", 20, QFont::Bold));
+    messageLabel->setAlignment(Qt::AlignCenter);
+    messageLabel->setWordWrap(true);
+    messageLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    messageLabel->setStyleSheet("color: rgb(255, 255, 255);");
+
+    QHBoxLayout *horizontalLayout = new QHBoxLayout(this);
+    QSpacerItem *leftSpacer = new QSpacerItem(20, 0, QSizePolicy::Fixed, QSizePolicy::Expanding);
+    horizontalLayout->addSpacerItem(leftSpacer);
+    verticalLayout = new QVBoxLayout();
+    QSpacerItem *topSpacer = new QSpacerItem(0, 70, QSizePolicy::Expanding, QSizePolicy::Fixed);
+    verticalLayout->addSpacerItem(topSpacer);
+    verticalLayout->addWidget(titleLabel);
+    verticalLayout->addWidget(messageLabel);
+    QWidget *buttonsWidget = new QWidget(this);
+    buttonsWidget->setFixedHeight(80);
+    buttonsWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    buttonsLayout = new QHBoxLayout();
+    buttonsLayout->setSpacing(30);
+    buttonsWidget->setLayout(buttonsLayout);
+    verticalLayout->addWidget(buttonsWidget);
+    horizontalLayout->addLayout(verticalLayout);
+    QSpacerItem *rightSpacer = new QSpacerItem(30, 0, QSizePolicy::Fixed, QSizePolicy::Expanding);
+    horizontalLayout->addSpacerItem(rightSpacer);
+
+    this->setFixedSize(dialogWidth, dialogHeight);
+    this->setStyleSheet("background-color:transparent");
+}
+
+void PVZDialog::setLayout(QLayout *layout) {
+    this->QWidget::setLayout(layout);
 }
 
 void PVZDialog::paintEvent(QPaintEvent *event) {

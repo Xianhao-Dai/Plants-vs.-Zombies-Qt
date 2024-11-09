@@ -1,31 +1,38 @@
 # ninja log v6
-51	1190	1731143958590985067	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/PVZGameStartWidget.cpp.o	53dfc2162859f437
-487	1339	1730965830508091273	CMakeFiles/Plants_Vs__Zombies.dir/src/src/GameEntrance.cpp.o	97a6b8e1785baab0
-52	1146	1731143958591227525	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/PVZPushButton.cpp.o	f671aba98c01bdcf
-4	419	1731133994180395169	build.ninja	6d79f138b50a2b9f
-37	634	1730901393131974495	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/util/ResourceLoaderUtil.cpp.o	85cdbb78d39aaded
-52	1171	1731143958591309858	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/PVZMenuWidget.cpp.o	b82fcb7affba9caf
-16	61	1731144166738138068	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
-950	1097	1731144167672207056	Plants_Vs__Zombies	78c331a2fe1fe817
-531	1738	1731143100893236902	CMakeFiles/Plants_Vs__Zombies.dir/Plants_Vs__Zombies_autogen/mocs_compilation.cpp.o	8e1e2af1024aefb6
-16	61	1731144166738138068	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
-16	61	1731144166738138068	Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
-450	521	1731132974683995588	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/EWIEGA46WW/qrc_rsc.cpp	703e5381dde73b1d
-39	849	1730966904403511046	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/GameStartWidget.cpp.o	6d07ed53040d1b71
-16	61	1731144166738138068	Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
-450	521	1731132974683995588	Plants_Vs__Zombies_autogen/EWIEGA46WW/qrc_rsc.cpp	703e5381dde73b1d
-52	1201	1731143958591139983	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/util/PVZResourceLoaderUtil.cpp.o	e365261d6b5bb7e2
-522	1039	1731132974686118714	CMakeFiles/Plants_Vs__Zombies.dir/Plants_Vs__Zombies_autogen/EWIEGA46WW/qrc_rsc.cpp.o	3fabe56fd1060b4d
-420	1314	1730967280854794842	CMakeFiles/Plants_Vs__Zombies.dir/main.cpp.o	b3f1d26603fd6d1
-546	1379	1730967111203181409	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/pvzpushbutton.cpp.o	19d6ff35fdabca1d
-46	864	1731076172094025072	CMakeFiles/Plants_Vs__Zombies.dir/src/src/PVZGameEntrance.cpp.o	b52cfc6853ce15e2
+55	750	1731146842623461236	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/PVZDialogButton.cpp.o	cb0c77a479581b92
+58	790	1731163523136031638	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/PVZDialog.cpp.o	173e6185b74f3c61
 28	123	1730886092042090752	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/util/WidgetUtil.cpp.o	95351a7a6cb39b7
-61	950	1731144166783066575	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/PVZDialog.cpp.o	173e6185b74f3c61
-52	1121	1731143958591480358	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/PVZDialogButton.cpp.o	cb0c77a479581b92
-12	54	1731144246751682832	Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
-12	54	1731144246751682832	Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
-12	54	1731144246751682832	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
-12	54	1731144246751682832	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
-54	802	1731144246793449469	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/PVZDialogButton.cpp.o	cb0c77a479581b92
-54	854	1731144246793286594	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/PVZMenuWidget.cpp.o	b82fcb7affba9caf
-854	937	1731144247593214769	Plants_Vs__Zombies	78c331a2fe1fe817
+46	864	1731076172094025072	CMakeFiles/Plants_Vs__Zombies.dir/src/src/PVZGameEntrance.cpp.o	b52cfc6853ce15e2
+546	1379	1730967111203181409	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/pvzpushbutton.cpp.o	19d6ff35fdabca1d
+420	1314	1730967280854794842	CMakeFiles/Plants_Vs__Zombies.dir/main.cpp.o	b3f1d26603fd6d1
+522	1039	1731132974686118714	CMakeFiles/Plants_Vs__Zombies.dir/Plants_Vs__Zombies_autogen/EWIEGA46WW/qrc_rsc.cpp.o	3fabe56fd1060b4d
+52	1201	1731143958591139983	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/util/PVZResourceLoaderUtil.cpp.o	e365261d6b5bb7e2
+450	521	1731132974683995588	Plants_Vs__Zombies_autogen/EWIEGA46WW/qrc_rsc.cpp	703e5381dde73b1d
+13	50	1731163759935489864	Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
+39	849	1730966904403511046	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/GameStartWidget.cpp.o	6d07ed53040d1b71
+450	521	1731132974683995588	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/EWIEGA46WW/qrc_rsc.cpp	703e5381dde73b1d
+13	50	1731163759935489864	Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
+13	50	1731163759935489864	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
+411	1157	1731162670990425728	CMakeFiles/Plants_Vs__Zombies.dir/Plants_Vs__Zombies_autogen/mocs_compilation.cpp.o	8e1e2af1024aefb6
+862	946	1731163760783921129	Plants_Vs__Zombies	78c331a2fe1fe817
+13	50	1731163759935489864	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
+50	861	1731163759972560911	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/PVZMenuWidget.cpp.o	b82fcb7affba9caf
+37	634	1730901393131974495	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/util/ResourceLoaderUtil.cpp.o	85cdbb78d39aaded
+4	419	1731133994180395169	build.ninja	6d79f138b50a2b9f
+52	1146	1731143958591227525	CMakeFiles/Plants_Vs__Zombies.dir/src/src/basic/UI/PVZPushButton.cpp.o	f671aba98c01bdcf
+487	1339	1730965830508091273	CMakeFiles/Plants_Vs__Zombies.dir/src/src/GameEntrance.cpp.o	97a6b8e1785baab0
+51	1190	1731143958590985067	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/PVZGameStartWidget.cpp.o	53dfc2162859f437
+14	456	1731163900665188000	Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
+14	456	1731163900665188000	Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
+14	456	1731163900665188000	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
+14	456	1731163900665188000	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
+457	1267	1731163900677281853	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/PVZGameStartWidget.cpp.o	53dfc2162859f437
+456	1271	1731163900676957272	CMakeFiles/Plants_Vs__Zombies.dir/Plants_Vs__Zombies_autogen/mocs_compilation.cpp.o	8e1e2af1024aefb6
+457	1331	1731163900677426144	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/PVZMenuWidget.cpp.o	b82fcb7affba9caf
+1332	1416	1731163901552203888	Plants_Vs__Zombies	78c331a2fe1fe817
+13	51	1731163958763324877	Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
+13	51	1731163958763324877	Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
+13	51	1731163958763324877	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/timestamp	4e07d40eb50c6915
+13	51	1731163958763324877	/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug/Plants_Vs__Zombies_autogen/mocs_compilation.cpp	4e07d40eb50c6915
+51	923	1731163958800993173	CMakeFiles/Plants_Vs__Zombies.dir/src/src/game_widget/PVZMenuWidget.cpp.o	b82fcb7affba9caf
+924	1073	1731163959673841575	Plants_Vs__Zombies	78c331a2fe1fe817
