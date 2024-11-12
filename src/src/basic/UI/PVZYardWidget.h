@@ -10,16 +10,17 @@
 
 
 class PVZYardWidget : public QWidget {
+    Q_OBJECT
 public:
     explicit PVZYardWidget(QWidget* parent = nullptr);
-    void setReadyToPlant(const QString &seedName);
+    void setReadyToPlant(const QString &seedName, const QPoint &pos);
 private:
     void setupUI();
     void mouseMoveEvent(QMouseEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override;
     bool readyToPlant; // true if select a certain plant in seed bank
     QString readyToPlantName; // selected plant name
     QLabel *readyToPlantLabel;
-
     void cancelReadyToPlant();
 };
 

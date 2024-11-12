@@ -20,7 +20,7 @@ private:
     void setUpUI();
     void paintEvent(QPaintEvent *event) override;
 signals:
-    void seedDidClicked(QString seed);
+    void seedDidClicked(const QString &seed, const QPoint &pos);
 
 };
 

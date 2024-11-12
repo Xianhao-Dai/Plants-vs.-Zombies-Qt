@@ -4,12 +4,14 @@
 
 #ifndef PVZADVENTURECONTROLLER_H
 #define PVZADVENTURECONTROLLER_H
+#include <QMouseEvent>
 #include <QtCore/qobject.h>
 
 
 class PVZAdventureWidget;
 class PVZYardWidget;
 class PVZSeedBankWidget;
+class QLabel;
 
 class PVZAdventureController : public QObject {
     Q_OBJECT

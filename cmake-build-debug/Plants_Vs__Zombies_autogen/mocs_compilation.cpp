@@ -8,5 +8,6 @@
 #include "4ALAF2RBVQ/moc_PVZSeedBankWidget.cpp"
 #include "4ALAF2RBVQ/moc_PVZSeedCardButton.cpp"
 #include "4ALAF2RBVQ/moc_PVZSeedPickerWidget.cpp"
+#include "4ALAF2RBVQ/moc_PVZYardWidget.cpp"
 #include "OKDJXEONNT/moc_PVZGameStartWidget.cpp"
 #include "OKDJXEONNT/moc_PVZMenuWidget.cpp"

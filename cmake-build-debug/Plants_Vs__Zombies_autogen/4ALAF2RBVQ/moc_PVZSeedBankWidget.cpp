@@ -38,7 +38,8 @@ constexpr auto qt_meta_stringdata_CLASSPVZSeedBankWidgetENDCLASS = QtMocHelpers:
     "PVZSeedBankWidget",
     "seedDidClicked",
     "",
-    "seed"
+    "seed",
+    "pos"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -59,10 +60,10 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSPVZSeedBankWidgetENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   20,    2, 0x06,    1 /* Public */,
+       1,    2,   20,    2, 0x06,    1 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, QMetaType::QString, QMetaType::QPoint,    3,    4,
 
        0        // eod
 };
@@ -78,7 +79,8 @@ Q_CONSTINIT const QMetaObject PVZSeedBankWidget::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<PVZSeedBankWidget, std::true_type>,
         // method 'seedDidClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QPoint &, std::false_type>
     >,
     nullptr
 } };
@@ -89,13 +91,13 @@ void PVZSeedBankWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         auto *_t = static_cast<PVZSeedBankWidget *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->seedDidClicked((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 0: _t->seedDidClicked((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QPoint>>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (PVZSeedBankWidget::*)(QString );
+            using _t = void (PVZSeedBankWidget::*)(const QString & , const QPoint & );
             if (_t _q_method = &PVZSeedBankWidget::seedDidClicked; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
@@ -135,9 +137,9 @@ int PVZSeedBankWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void PVZSeedBankWidget::seedDidClicked(QString _t1)
+void PVZSeedBankWidget::seedDidClicked(const QString & _t1, const QPoint & _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

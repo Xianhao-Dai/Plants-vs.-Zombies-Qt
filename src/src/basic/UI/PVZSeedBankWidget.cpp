@@ -54,7 +54,7 @@ void PVZSeedBankWidget::setUpUI() {
         PVZSeedCardButton *button = new PVZSeedCardButton(seeds[i], QSize(seedCardWidth, seedCardHeight));
         layout->addWidget(button);
         connect(button, &QPushButton::clicked, [=]() {
-            seedDidClicked(seeds[i]);
+            seedDidClicked(seeds[i], this->mapFromGlobal(QCursor::pos()));
         });
     }
     layout->addSpacerItem(rightSpacer);

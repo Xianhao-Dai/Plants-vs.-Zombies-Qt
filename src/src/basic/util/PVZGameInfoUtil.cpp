@@ -6,7 +6,6 @@
 
 #include <QFile>
 #include <QTextStream>
-#include <QDebug>
 #include <QDir>
 #include <QStandardPaths>
 

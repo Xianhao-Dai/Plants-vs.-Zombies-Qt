@@ -63,7 +63,7 @@ void PVZAdventureController::setUpDefaultGame() {
         bank->move(10, 0);
         bank->show();
         yard = new PVZYardWidget(adventureWidget);
-        yard->move(25, 75);
+        yard->move(0, 0);
         yard->show();
         connect(bank, &PVZSeedBankWidget::seedDidClicked, yard, &PVZYardWidget::setReadyToPlant);
     });
