@@ -16,7 +16,7 @@ public:
     void setText(const QString &text);
     void setFont(const QFont &font);
 
-private:
+protected:
     QLabel *textLabel;
 
     QString iconPath;

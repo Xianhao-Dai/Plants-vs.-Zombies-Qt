@@ -322,6 +322,24 @@
 			null
 		],
 		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/adventure/PVZAdventureController.h",
+			"MU",
+			"ODTZXA7KQB/moc_PVZAdventureController.cpp",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/adventure/PVZAdventureWidget.h",
+			"MU",
+			"ODTZXA7KQB/moc_PVZAdventureWidget.cpp",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/adventure/util/PVZAdventureUtil.h",
+			"MU",
+			"YWQKLOWGO7/moc_PVZAdventureUtil.cpp",
+			null
+		],
+		[
 			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZDialog.h",
 			"MU",
 			"4ALAF2RBVQ/moc_PVZDialog.cpp",
@@ -334,9 +352,45 @@
 			null
 		],
 		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZGridWidget.h",
+			"MU",
+			"4ALAF2RBVQ/moc_PVZGridWidget.cpp",
+			null
+		],
+		[
 			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZPushButton.h",
 			"MU",
 			"4ALAF2RBVQ/moc_PVZPushButton.cpp",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZSeedBankWidget.h",
+			"MU",
+			"4ALAF2RBVQ/moc_PVZSeedBankWidget.cpp",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZSeedCardButton.h",
+			"MU",
+			"4ALAF2RBVQ/moc_PVZSeedCardButton.cpp",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZSeedPickerWidget.h",
+			"MU",
+			"4ALAF2RBVQ/moc_PVZSeedPickerWidget.cpp",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZYardWidget.h",
+			"MU",
+			"4ALAF2RBVQ/moc_PVZYardWidget.cpp",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/util/PVZGameInfoUtil.h",
+			"MU",
+			"LUZOPPKV3E/moc_PVZGameInfoUtil.cpp",
 			null
 		],
 		[
@@ -349,6 +403,12 @@
 			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/util/PVZWidgetUtil.h",
 			"MU",
 			"LUZOPPKV3E/moc_PVZWidgetUtil.cpp",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/entity/plants/PVZBasicPlant.h",
+			"MU",
+			"7TCUP4DGFW/moc_PVZBasicPlant.cpp",
 			null
 		],
 		[
@@ -436,6 +496,21 @@
 			null
 		],
 		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/adventure/PVZAdventureController.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/adventure/PVZAdventureWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/adventure/util/PVZAdventureUtil.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZDialog.cpp",
 			"MU",
 			null
@@ -446,7 +521,37 @@
 			null
 		],
 		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZGridWidget.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZPushButton.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZSeedBankWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZSeedCardButton.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZSeedPickerWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/UI/PVZYardWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daixianhao/CLionProjects/Plants Vs. Zombies/src/src/basic/util/PVZGameInfoUtil.cpp",
 			"MU",
 			null
 		],

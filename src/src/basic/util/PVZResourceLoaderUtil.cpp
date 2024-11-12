@@ -119,6 +119,81 @@ QPixmap PVZResourceLoaderUtil::verticallyJoinPixmaps(std::initializer_list<QPixm
     return QPixmap::fromImage(image);
 }
 
+QPixmap PVZResourceLoaderUtil::overlapPixmaps(QPixmap pixmap_1, QPixmap pixmap_2, QPoint offset_1, QPoint offset_2, Qt::Alignment align) {
+    int width = pixmap_1.width() > pixmap_2.width() ? pixmap_1.width() : pixmap_2.width();
+    int height = pixmap_1.height() > pixmap_2.height() ? pixmap_1.height() : pixmap_2.height();
+    QImage image = QImage(QSize(width, height), QImage::Format_ARGB32_Premultiplied);
+    QPainter painter(&image);
+    painter.setRenderHint(QPainter::Antialiasing, true);
+    painter.setCompositionMode(QPainter::CompositionMode_Source);
+    painter.fillRect(image.rect(), Qt::transparent);
+    painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
+    int originX_1 = 0;
+    int originY_1 = 0;
+    int originX_2 = 0;
+    int originY_2 = 0;
+    if (align & Qt::AlignLeft) {
+        originX_1 = originX_2 = 0;
+    } else if (align & Qt::AlignHCenter) {
+        originX_1 = width / 2 - pixmap_1.width() / 2;
+        originX_2 = width / 2 - pixmap_2.width() / 2;
+    } else if (align & Qt::AlignRight) {
+        originX_1 = width - pixmap_1.width();
+        originX_2 = width - pixmap_2.width();
+    }
+    if (align & Qt::AlignTop) {
+        originY_1 = originY_2 = 0;
+    } else if (align & Qt::AlignVCenter) {
+        originY_1 = height / 2 - pixmap_1.height() / 2;
+        originY_2 = height / 2 - pixmap_2.height() / 2;
+    } else if (align & Qt::AlignBottom) {
+        originY_1 = height - pixmap_1.height();
+        originY_2 = height - pixmap_2.height();
+    }
+    originX_1 += offset_1.x();
+    originY_1 += offset_1.y();
+    originX_2 += offset_2.x();
+    originY_2 += offset_2.y();
+    painter.drawPixmap(originX_1, originY_1, pixmap_1);
+    painter.drawPixmap(originX_2, originY_2, pixmap_2);
+    return QPixmap::fromImage(image);
+}
+
+QPixmap PVZResourceLoaderUtil::overlapPixmaps(std::initializer_list<QPixmap> pList, Qt::Alignment align) {
+    int width = 0;
+    int height = 0;
+    for (QPixmap p : pList) {
+        width = width > p.width() ? width : p.width();
+        height = height > p.height() ? height : p.height();
+    }
+    QImage image = QImage(QSize(width, height), QImage::Format_ARGB32_Premultiplied);
+    QPainter painter(&image);
+    painter.setRenderHint(QPainter::Antialiasing, true);
+    painter.setCompositionMode(QPainter::CompositionMode_Source);
+    painter.fillRect(image.rect(), Qt::transparent);
+    painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
+    for (QPixmap p : pList) {
+        int originX = 0;
+        int originY = 0;
+        if (align & Qt::AlignLeft) {
+            originX = 0;
+        } else if (align & Qt::AlignHCenter) {
+            originX = width / 2 - p.width() / 2;
+        } else if (align & Qt::AlignRight) {
+            originX = width - p.width();
+        }
+        if (align & Qt::AlignTop) {
+            originY = 0;
+        } else if (align & Qt::AlignVCenter) {
+            originY = height / 2 - p.height() / 2;
+        } else if (align & Qt::AlignBottom) {
+            originY = height - p.height();
+        }
+        painter.drawPixmap(originX, originY, p);
+    }
+    return QPixmap::fromImage(image);
+}
+
 QPixmap PVZResourceLoaderUtil::adjustBrightness(const QPixmap& pixmap, double brightness) {
     if (brightness < 0) {
         brightness = 0;
@@ -141,6 +216,34 @@ QPixmap PVZResourceLoaderUtil::adjustBrightness(const QPixmap& pixmap, double br
         }
     }
     return QPixmap::fromImage(newImage);
+}
+
+QPixmap PVZResourceLoaderUtil::adjustAlpha(const QPixmap& pixmap, double alpha) {
+    if (alpha < 0) {
+        alpha = 0;
+    }
+    if (alpha > 1) {
+        alpha = 1;
+    }
+    QImage originImage = pixmap.toImage();
+    QColor oldcolor;
+    QImage newImage = QImage(originImage.width(), originImage.height(), QImage::Format_ARGB32);
+    for (int y = 0; y < originImage.height(); y++) {
+        for (int x = 0; x < originImage.width(); x++) {
+            oldcolor = originImage.pixel(x, y);
+            int r = oldcolor.red();
+            int g = oldcolor.green();
+            int b = oldcolor.blue();
+            int a = qAlpha(originImage.pixel(x, y)) * alpha;
+            newImage.setPixel(x, y, qRgba(r, g, b, a));
+        }
+    }
+    return QPixmap::fromImage(newImage);
+}
+
+QPixmap PVZResourceLoaderUtil::loadPlantPixmap(const QString& seedName, const QString& prefix) {
+    QString path = "/plants/" + seedName + ".png";
+    return loadPixmap(path, prefix);
 }
 
 QString PVZResourceLoaderUtil::getAbsolutePath(const QString& path, const QString& prefix) {

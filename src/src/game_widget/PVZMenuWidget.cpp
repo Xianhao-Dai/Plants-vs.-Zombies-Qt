@@ -13,6 +13,10 @@
 
 #include <QPainter>
 #include <QLineEdit>
+#include <QTimer>
+
+#include "src/src/adventure/PVZAdventureController.h"
+#include "src/src/basic/util/PVZGameInfoUtil.h"
 
 PVZMenuWidget::PVZMenuWidget(QWidget *parent) :
 QWidget(parent),
@@ -26,22 +30,29 @@ void PVZMenuWidget::setUpUI() {
     this->setWindowTitle("Plants Vs. Zombies");
 
     startAdventureButton = new PVZPushButton(this, "/bg/menu_start_adventure");
-    startAdventureButton->move(585, 20);
+    startAdventureButton->move(399, 62);
+    connect(startAdventureButton, &PVZPushButton::clicked, [=]() {
+        QTimer::singleShot(100, [=]() {
+            this->hide();
+            PVZAdventureController *adventureController = new PVZAdventureController();
+            adventureController->runAdventure();
+        });
+    });
+
     miniGamesButton = new PVZPushButton(this, "/bg/menu_mini_games");
-    miniGamesButton->move(590, 135);
+    miniGamesButton->move(405, 171);
     puzzleButton = new PVZPushButton(this, "/bg/menu_puzzle");
-    puzzleButton->move(595, 220);
+    puzzleButton->move(413, 256);
     survivalButton = new PVZPushButton(this, "/bg/menu_survival");
-    survivalButton->move(600, 300);
+    survivalButton->move(412, 328);
     changeNameButton = new PVZPushButton(this, "/bg/menu_change_name");
     changeNameButton->move(50, 135);
     changeNameDialog = new PVZDialog("Change Your Name", "You may change your name if it's not your account!");
-    changeNameDialog->setModal(true);
-    changeNameDialog->setWindowFlag(Qt::FramelessWindowHint);
     changeNameDialog->addButton("Confirm", [=]() {
         changeNameDialog->hide();
         if (!nameLineEdit->text().isEmpty()) {
             nameLabel->setText(nameLineEdit->text());
+            PVZGameInfoUtil::setUserName(nameLineEdit->text());
         }
         nameLineEdit->setText("");
         nameLineEdit->clearFocus();
@@ -69,14 +80,15 @@ void PVZMenuWidget::setUpUI() {
     nameLabel->move(85, 95);
     nameLabel->setFont(QFont("Chalkduster", 15, QFont::Light));
     nameLabel->setStyleSheet("color: rgb(255, 255, 255); background-color: transparent;");
+    nameLabel->setText(PVZGameInfoUtil::getUserName());
 }
 
 void PVZMenuWidget::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
     QPixmap sky = PVZResourceLoaderUtil::loadFullWindowPixmap("/bg/menu_sky.jpg");
     QPixmap tree = PVZResourceLoaderUtil::loadScaledPixmap("/bg/menu_tree.png", 0, mainWindowHeight, Qt::KeepAspectRatio);
-    QPixmap ground = PVZResourceLoaderUtil::loadScaledPixmap("/bg/menu_ground.png", 0, mainWindowHeight, Qt::KeepAspectRatio);
-    QPixmap tomb = PVZResourceLoaderUtil::loadScaledPixmap("/bg/menu_tomb.png", 0, mainWindowHeight, Qt::KeepAspectRatio);
+    QPixmap tomb = PVZResourceLoaderUtil::loadScaledPixmap("/bg/menu_tomb.png", 0, mainWindowHeight - 40, Qt::KeepAspectRatio);
+    QPixmap ground = PVZResourceLoaderUtil::loadPixmap("/bg/menu_ground.png");
     QPixmap cloud1 = PVZResourceLoaderUtil::loadPixmap("/bg/menu_cloud_1.png");
     QPixmap cloud2 = PVZResourceLoaderUtil::loadPixmap("/bg/menu_cloud_2.png");
     QPixmap cloud3 = PVZResourceLoaderUtil::loadPixmap("/bg/menu_cloud_3.png");
@@ -97,11 +109,11 @@ void PVZMenuWidget::paintEvent(QPaintEvent *event) {
     painter.drawPixmap(500, 150, cloud4);
     painter.drawPixmap(600, 200, cloud5);
     painter.drawPixmap(100, 300, cloud6);
-    painter.drawPixmap(0, 0, tree);
-    painter.drawPixmap(mainWindowWidth - tomb.width(), 0, tomb);
-    painter.drawPixmap(585, 20, shadow1);
-    painter.drawPixmap(590, 135, shadow2);
-    painter.drawPixmap(595, 220, shadow3);
-    painter.drawPixmap(600, 300, shadow4);
+    painter.drawPixmap(0, mainWindowHeight - tree.height(), tree);
+    painter.drawPixmap(mainWindowWidth - tomb.width(), mainWindowHeight - tomb.height(), tomb);
+    painter.drawPixmap(399, 62, shadow1);
+    painter.drawPixmap(405, 171, shadow2);
+    painter.drawPixmap(413, 256, shadow3);
+    painter.drawPixmap(412, 328, shadow4);
     painter.drawPixmap(50, 0, welcome);
 }

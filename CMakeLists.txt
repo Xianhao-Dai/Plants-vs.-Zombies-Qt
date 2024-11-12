@@ -30,6 +30,25 @@ add_executable(Plants_Vs__Zombies main.cpp
         src/src/basic/UI/PVZDialog.h
         src/src/basic/UI/PVZDialogButton.cpp
         src/src/basic/UI/PVZDialogButton.h
+        src/src/adventure/PVZAdventureWidget.cpp
+        src/src/adventure/PVZAdventureWidget.h
+        src/src/adventure/PVZAdventureController.cpp
+        src/src/adventure/PVZAdventureController.h
+        src/src/basic/util/PVZGameInfoUtil.cpp
+        src/src/basic/util/PVZGameInfoUtil.h
+        src/src/basic/UI/PVZSeedPickerWidget.cpp
+        src/src/basic/UI/PVZSeedPickerWidget.h
+        src/src/entity/plants/PVZBasicPlant.h
+        src/src/basic/UI/PVZSeedCardButton.cpp
+        src/src/basic/UI/PVZSeedCardButton.h
+        src/src/basic/UI/PVZSeedBankWidget.cpp
+        src/src/basic/UI/PVZSeedBankWidget.h
+        src/src/adventure/util/PVZAdventureUtil.cpp
+        src/src/adventure/util/PVZAdventureUtil.h
+        src/src/basic/UI/PVZYardWidget.cpp
+        src/src/basic/UI/PVZYardWidget.h
+        src/src/basic/UI/PVZGridWidget.cpp
+        src/src/basic/UI/PVZGridWidget.h
 )
 
 target_link_libraries(Plants_Vs__Zombies

@@ -968,15 +968,34 @@ Plants_Vs__Zombies_autogen/timestamp: \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/rsc.qrc \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/PVZGameEntrance.cpp \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/PVZGameEntrance.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/adventure/PVZAdventureController.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/adventure/PVZAdventureController.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/adventure/PVZAdventureWidget.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/adventure/PVZAdventureWidget.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/adventure/util/PVZAdventureUtil.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/adventure/util/PVZAdventureUtil.h \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZDialog.cpp \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZDialog.h \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZDialogButton.cpp \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZDialogButton.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZGridWidget.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZGridWidget.h \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZPushButton.cpp \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZPushButton.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZSeedBankWidget.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZSeedBankWidget.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZSeedCardButton.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZSeedCardButton.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZSeedPickerWidget.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZSeedPickerWidget.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZYardWidget.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/UI/PVZYardWidget.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/util/PVZGameInfoUtil.cpp \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/util/PVZGameInfoUtil.h \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/util/PVZResourceLoaderUtil.cpp \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/util/PVZResourceLoaderUtil.h \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/basic/util/PVZWidgetUtil.h \
+	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/entity/plants/PVZBasicPlant.h \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/game_widget/PVZGameStartWidget.cpp \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/game_widget/PVZGameStartWidget.h \
 	/Users/daixianhao/CLionProjects/Plants\ Vs.\ Zombies/src/src/game_widget/PVZMenuWidget.cpp \

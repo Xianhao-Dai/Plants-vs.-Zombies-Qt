@@ -9,6 +9,7 @@
 
 class PVZResourceLoaderUtil {
 public:
+    /*General*/
     static QPixmap loadPixmap(const QString& path, const QString& prefix="default");
     static QPixmap loadFullWindowPixmap(const QString& path, const QString& prefix="default");
     static QPixmap loadScaledPixmap(const QString& path, double scale, const QString& prefix="default");
@@ -20,7 +21,13 @@ public:
     static QPixmap rotatedPixmap(const QPixmap& pixmap, int angle);
     static QPixmap horizontallyJoinPixmaps(std::initializer_list<QPixmap> pList, Qt::Alignment align=Qt::AlignCenter);
     static QPixmap verticallyJoinPixmaps(std::initializer_list<QPixmap> pList, Qt::Alignment align=Qt::AlignCenter);
+    static QPixmap overlapPixmaps(QPixmap pixmap_1, QPixmap pixmap_2, QPoint offset_1, QPoint offset_2, Qt::Alignment align=Qt::AlignCenter);
+    static QPixmap overlapPixmaps(std::initializer_list<QPixmap> pList, Qt::Alignment align=Qt::AlignCenter);
     static QPixmap adjustBrightness(const QPixmap& pixmap, double brightness);
+    static QPixmap adjustAlpha(const QPixmap& pixmap, double alpha);
+
+    /*Plants*/
+    static QPixmap loadPlantPixmap(const QString& seedName, const QString& prefix="default");
 
 private:
     static QString getAbsolutePath(const QString& path, const QString& prefix="default");

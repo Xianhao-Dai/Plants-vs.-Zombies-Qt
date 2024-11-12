@@ -33,6 +33,9 @@ void PVZDialog::setUpUI() {
     dialogWidth = 600;
     dialogHeight = 500;
 
+    this->setModal(true);
+    this->setWindowFlag(Qt::FramelessWindowHint);
+
     titleLabel = new QLabel(title, this);
     titleLabel->setFont(QFont("Chalkduster", 40, QFont::Bold));
     titleLabel->setAlignment(Qt::AlignCenter);

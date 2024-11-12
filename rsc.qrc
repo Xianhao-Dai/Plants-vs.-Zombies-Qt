@@ -37,5 +37,27 @@
         <file>src/assets/bg/dialog_button_left.png</file>
         <file>src/assets/bg/dialog_button_middle.png</file>
         <file>src/assets/bg/dialog_button_right.png</file>
+        <file>src/assets/bg/bg_seed_bank.png</file>
+        <file>src/assets/bg/bg_seed_card.png</file>
+        <file>src/assets/bg/bg_seed_picker.png</file>
+        <file>src/assets/game_scene/scene_bare_yard.jpg</file>
+        <file>src/assets/game_scene/scene_yard_daytime.jpg</file>
+        <file>src/assets/game_scene/scene_yard_night.jpg</file>
+        <file>src/assets/game_scene/scene_pool_daytime.jpg</file>
+        <file>src/assets/game_scene/scene_pool_night.jpg</file>
+        <file>src/assets/game_scene/scene_roof_daytime.jpg</file>
+        <file>src/assets/game_scene/scene_roof_night.jpg</file>
+        <file>src/assets/plants/peashooter.png</file>
+        <file>src/assets/plants/peashooter.gif</file>
+        <file>src/assets/plants/sunflower.png</file>
+        <file>src/assets/plants/sunflower.gif</file>
+        <file>src/assets/plants/cherrybomb.png</file>
+        <file>src/assets/plants/cherrybomb.gif</file>
+        <file>src/assets/plants/nuts.png</file>
+        <file>src/assets/plants/nuts.gif</file>
+        <file>src/assets/plants/potatomine.png</file>
+        <file>src/assets/plants/potatomine.gif</file>
+        <file>src/assets/plants/tallnuts.png</file>
     </qresource>
+
 </RCC>

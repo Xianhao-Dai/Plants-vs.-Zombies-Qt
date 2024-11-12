@@ -8,9 +8,13 @@
 
 
 class PVZWidgetUtil {
-    public:
-    static constexpr int mainWidgetWidth = 1000;
+public:
+    static constexpr int mainWidgetWidth = 800;
     static constexpr int mainWidgetHeight = 600;
+    static constexpr int seedBankWidgetWidth = mainWidgetWidth * 5 / 8;
+    static constexpr int seedBankWidgetHeight = mainWidgetHeight / 6;
+    static constexpr int seedPickerWidgetWidth = mainWidgetWidth / 2;
+    static constexpr int seedPickerWidgetHeight = mainWidgetHeight * 5 / 6;
 };
 
 
