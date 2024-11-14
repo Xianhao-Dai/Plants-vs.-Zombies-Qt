@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Plants_Vs__Zombies",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Plants_Vs__Zombies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Plants_Vs__Zombies-Debug-c70cf85560cf474abf70.json",
+					"name" : "Plants_Vs__Zombies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Plants_Vs__Zombies_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Plants_Vs__Zombies_autogen-Debug-eabed0bb96b6044b1c0d.json",
+					"name" : "Plants_Vs__Zombies_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Plants_Vs__Zombies_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Plants_Vs__Zombies_autogen_timestamp_deps-Debug-0d050b78a133943fd9d9.json",
+					"name" : "Plants_Vs__Zombies_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/daixianhao/CLionProjects/Plants Vs. Zombies/cmake-build-debug",
+		"source" : "/Users/daixianhao/CLionProjects/Plants Vs. Zombies"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
