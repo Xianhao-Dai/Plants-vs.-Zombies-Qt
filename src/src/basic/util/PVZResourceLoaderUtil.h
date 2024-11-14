@@ -17,7 +17,7 @@ public:
     static QPixmap loadScaledPixmapOnWidth(const QString& path, int width, const QString& prefix="default");
     static QPixmap loadScaledPixmapOnHeight(const QString& path, int height, const QString& prefix="default");
     static QPixmap resizePixmap(const QPixmap& pixmap, int width, int height, Qt::AspectRatioMode mode=Qt::IgnoreAspectRatio);
-    static void resizeMovie(QMovie *movie, int width, int height, Qt::AspectRatioMode mode=Qt::IgnoreAspectRatio);
+    static const QSize &resizeMovie(QMovie *movie, int width, int height, Qt::AspectRatioMode mode=Qt::IgnoreAspectRatio);
     static QPixmap loadRotatedPixmap(const QString& path, int angle, const QString& prefix="default");
     static QPixmap rotatedPixmap(const QPixmap& pixmap, int angle);
     static QPixmap horizontallyJoinPixmaps(std::initializer_list<QPixmap> pList, Qt::Alignment align=Qt::AlignCenter);

@@ -58,15 +58,17 @@ QPixmap PVZResourceLoaderUtil::resizePixmap(const QPixmap &pixmap, int width, in
     }
 }
 
-void PVZResourceLoaderUtil::resizeMovie(QMovie *movie, int width, int height, Qt::AspectRatioMode mode) {
+const QSize &PVZResourceLoaderUtil::resizeMovie(QMovie *movie, int width, int height, Qt::AspectRatioMode mode) {
     if (mode == Qt::KeepAspectRatio) {
         QSize size = movie->currentPixmap().size();
         double scaleOnWidth = static_cast<double>(width) / static_cast<double>(size.width());
         double scaleOnHeight = static_cast<double>(height) / static_cast<double>(size.height());
         double scale = scaleOnWidth > scaleOnHeight ? scaleOnWidth : scaleOnHeight;
         movie->setScaledSize(QSize(static_cast<int>(size.width() * scale), static_cast<int>(size.height() * scale)));
+        return QSize(static_cast<int>(size.width() * scale), static_cast<int>(size.height() * scale));
     } else if (mode == Qt::IgnoreAspectRatio) {
         movie->setScaledSize(QSize(width, height));
+        return QSize(width, height);
     }
 }
 

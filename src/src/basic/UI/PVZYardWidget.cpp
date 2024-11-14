@@ -59,10 +59,9 @@ void PVZYardWidget::setupUI() {
         grids[row].resize(9);
         for (int col = 0;col < 9;col++) {
             grids[row][col] = new PVZGridWidget(row, col, this);
-            // grids[row][col]->setFixedSize(gridWidth, gridHeight);
-            // grids[row][col]->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+            grids[row][col]->setFixedSize(gridWidth, gridHeight);
+            grids[row][col]->move(leftMargin + (gridWidth + spacing) * col, topMargin + (gridHeight + spacing) * row);
             grids[row][col]->setAttribute(Qt::WA_TransparentForMouseEvents, true);
-            connect(this, &PVZYardWidget::plantGrown, grids[row][col], &PVZGridWidget::plantGrown);
         }
     }
 }
@@ -83,8 +82,13 @@ void PVZYardWidget::mousePressEvent(QMouseEvent *event) {
         if (index.first == -1 || index.second == -1) {
             event->ignore();
         } else {
-            plantGrown(readyToPlantName, index);
-            cancelReadyToPlant();
+            PVZGridWidget *grid = grids[index.first][index.second];
+            if (!grid->canPlant(readyToPlantName)) {
+                event->ignore();
+            } else {
+                grid->growPlant(readyToPlantName);
+                cancelReadyToPlant();
+            }
         }
     } else if (event->button() == Qt::RightButton) {
         cancelReadyToPlant();
@@ -92,13 +96,11 @@ void PVZYardWidget::mousePressEvent(QMouseEvent *event) {
 }
 
 pair<int, int> PVZYardWidget::convertPosToIndex(const QPoint& pos) {
-    for (int row = 0;row < 5;row++) {
-        for (int col = 0;col < 9;col++) {
-            if (grids[row][col]->rect().contains(pos)) {
-                return make_pair(row, col);
-            }
-        }
+    int row = (pos.y() - topMargin) / (gridHeight + spacing);
+    int col = (pos.x() - leftMargin) / (gridWidth + spacing);
+    if (row < 0 || row >= 5 || col < 0 || col >= 9) {
+        return make_pair(-1, -1);
     }
-    return make_pair(-1, -1);
+    return make_pair(row, col);
 }
 

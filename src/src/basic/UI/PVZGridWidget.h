@@ -14,7 +14,7 @@ class PVZGridWidget : public QWidget {
     Q_OBJECT
 public:
     explicit PVZGridWidget(int row, int col, QWidget* parent = nullptr);
-    void plantGrown(const QString &seedName, pair<int, int>index);
+    void growPlant(const QString &seedName);
     bool canPlant(const QString &seedName);
 private:
     int row;

@@ -30,9 +30,6 @@ private:
 
     void cancelReadyToPlant();
     pair<int, int> convertPosToIndex(const QPoint& pos);
-
-signals:
-    void plantGrown(const QString &seedName, pair<int, int>index);
 };
 
 

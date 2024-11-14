@@ -16,23 +16,23 @@ PVZGridWidget::PVZGridWidget(int row, int col, QWidget* parent) : QWidget(parent
 }
 
 void PVZGridWidget::setupUI() {
-    QVBoxLayout *layout = new QVBoxLayout(this);
-    // QSpacerItem *spacer = new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Expanding);
-    layout->setSpacing(0);
-    layout->setContentsMargins(0, 0, 0, 0);
-    // layout->addSpacerItem(spacer);
-    plantLabel = new QLabel();
-    // plantLabel->setScaledContents(true);
+    plantLabel = new QLabel(this);
+    plantLabel->setScaledContents(true);
     plantLabel->setAttribute(Qt::WA_TransparentForMouseEvents);
-    layout->addWidget(plantLabel);
 }
 
-void PVZGridWidget::plantGrown(const QString &seedName, pair<int, int>index) {
-    if (index.first != row || index.second != col) {
+void PVZGridWidget::growPlant(const QString &seedName) {
+    if (!this->canPlant(seedName)) {
         return;
     }
     QMovie *movie = new QMovie(":/default/src/assets/plants/" + seedName + ".gif");
     movie->start();
-    PVZResourceLoaderUtil::resizeMovie(movie, this->width(), 0, Qt::KeepAspectRatio);
+    QSize size = PVZResourceLoaderUtil::resizeMovie(movie, this->width(), 0, Qt::KeepAspectRatio);
+    plantLabel->resize(size);
+    plantLabel->move(0, this->height() - size.height());
     plantLabel->setMovie(movie);
+}
+
+bool PVZGridWidget::canPlant(const QString &seedName) {
+    return true;
 }
