@@ -8,8 +8,18 @@
 
 #include <QLabel>
 #include <QMouseEvent>
+#include <QtWidgets/qgridlayout.h>
 
+#include "PVZGridWidget.h"
 #include "src/src/basic/util/PVZWidgetUtil.h"
+
+static int leftMargin = 30;
+static int topMargin = 80;
+static int rightMargin = 40;
+static int bottomMargin = 40;
+static int spacing = 1;
+static int gridWidth = (PVZWidgetUtil::mainWidgetWidth - leftMargin - rightMargin) / 9 - spacing;
+static int gridHeight = (PVZWidgetUtil::mainWidgetHeight - topMargin - bottomMargin) / 5 - spacing;
 
 PVZYardWidget::PVZYardWidget(QWidget* parent) : QWidget(parent) {
     readyToPlant = false;
@@ -44,6 +54,17 @@ void PVZYardWidget::setupUI() {
     readyToPlantLabel = new QLabel(this);
     readyToPlantLabel->hide();
     readyToPlantLabel->setAttribute(Qt::WA_TransparentForMouseEvents, true);
+    grids.resize(5);
+    for (int row = 0;row < 5;row++) {
+        grids[row].resize(9);
+        for (int col = 0;col < 9;col++) {
+            grids[row][col] = new PVZGridWidget(row, col, this);
+            // grids[row][col]->setFixedSize(gridWidth, gridHeight);
+            // grids[row][col]->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+            grids[row][col]->setAttribute(Qt::WA_TransparentForMouseEvents, true);
+            connect(this, &PVZYardWidget::plantGrown, grids[row][col], &PVZGridWidget::plantGrown);
+        }
+    }
 }
 
 void PVZYardWidget::mouseMoveEvent(QMouseEvent *event) {
@@ -55,11 +76,29 @@ void PVZYardWidget::mouseMoveEvent(QMouseEvent *event) {
 
 void PVZYardWidget::mousePressEvent(QMouseEvent *event) {
     if (!readyToPlant) {
-        return;
+        event->ignore();
     }
     if (event->button() == Qt::LeftButton) {
+        pair<int, int>index = convertPosToIndex(event->pos());
+        if (index.first == -1 || index.second == -1) {
+            event->ignore();
+        } else {
+            plantGrown(readyToPlantName, index);
+            cancelReadyToPlant();
+        }
     } else if (event->button() == Qt::RightButton) {
         cancelReadyToPlant();
     }
+}
+
+pair<int, int> PVZYardWidget::convertPosToIndex(const QPoint& pos) {
+    for (int row = 0;row < 5;row++) {
+        for (int col = 0;col < 9;col++) {
+            if (grids[row][col]->rect().contains(pos)) {
+                return make_pair(row, col);
+            }
+        }
+    }
+    return make_pair(-1, -1);
 }
 

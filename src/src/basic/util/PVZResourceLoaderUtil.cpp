@@ -4,6 +4,8 @@
 
 #include "PVZResourceLoaderUtil.h"
 
+#include <QMovie>
+
 #include "PVZWidgetUtil.h"
 #include "src/src/PVZGameEntrance.h"
 
@@ -53,6 +55,18 @@ QPixmap PVZResourceLoaderUtil::resizePixmap(const QPixmap &pixmap, int width, in
         return pixmap.scaled(QSize(static_cast<int>(size.width() * scale), static_cast<int>(size.height() * scale)), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     } else if (mode == Qt::IgnoreAspectRatio) {
         return pixmap.scaled(QSize(width, height), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    }
+}
+
+void PVZResourceLoaderUtil::resizeMovie(QMovie *movie, int width, int height, Qt::AspectRatioMode mode) {
+    if (mode == Qt::KeepAspectRatio) {
+        QSize size = movie->currentPixmap().size();
+        double scaleOnWidth = static_cast<double>(width) / static_cast<double>(size.width());
+        double scaleOnHeight = static_cast<double>(height) / static_cast<double>(size.height());
+        double scale = scaleOnWidth > scaleOnHeight ? scaleOnWidth : scaleOnHeight;
+        movie->setScaledSize(QSize(static_cast<int>(size.width() * scale), static_cast<int>(size.height() * scale)));
+    } else if (mode == Qt::IgnoreAspectRatio) {
+        movie->setScaledSize(QSize(width, height));
     }
 }
 

@@ -8,6 +8,9 @@
 
 #include "src/src/adventure/PVZAdventureWidget.h"
 
+class PVZGridWidget;
+class QGridLayout;
+using namespace std;
 
 class PVZYardWidget : public QWidget {
     Q_OBJECT
@@ -18,10 +21,18 @@ private:
     void setupUI();
     void mouseMoveEvent(QMouseEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
+
     bool readyToPlant; // true if select a certain plant in seed bank
     QString readyToPlantName; // selected plant name
     QLabel *readyToPlantLabel;
+
+    vector<vector<PVZGridWidget *>> grids;
+
     void cancelReadyToPlant();
+    pair<int, int> convertPosToIndex(const QPoint& pos);
+
+signals:
+    void plantGrown(const QString &seedName, pair<int, int>index);
 };
 
 
