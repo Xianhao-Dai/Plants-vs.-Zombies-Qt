@@ -27,9 +27,9 @@ void PVZGridWidget::growPlant(const QString &seedName) {
     }
     QMovie *movie = new QMovie(":/default/src/assets/plants/" + seedName + ".gif");
     movie->start();
-    QSize size = PVZResourceLoaderUtil::resizeMovie(movie, this->width(), 0, Qt::KeepAspectRatio);
+    QSize size = PVZResourceLoaderUtil::resizeMovie(movie, this->width(), this->height(), Qt::KeepAspectRatio);
     plantLabel->resize(size);
-    plantLabel->move(0, this->height() - size.height());
+    plantLabel->move(this->width() - size.width(), this->height() - size.height());
     plantLabel->setMovie(movie);
 }
 

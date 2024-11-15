@@ -29,7 +29,7 @@ private:
     vector<vector<PVZGridWidget *>> grids;
 
     void cancelReadyToPlant();
-    pair<int, int> convertPosToIndex(const QPoint& pos);
+    static pair<int, int> convertPosToIndex(const QPoint& pos);
 };
 
 
